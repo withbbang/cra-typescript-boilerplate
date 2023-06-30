@@ -1,0 +1,68 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 300;
+
+  .modal_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 120px;
+    padding: 40px;
+    text-align: center;
+    background-color: $more-light;
+    border-radius: 10px;
+    transform: translateX(-50%) translateY(-50%);
+
+    > span {
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+
+    > button {
+      width: 80%;
+      height: 40px;
+      margin-top: auto;
+      box-sizing: border-box;
+      color: $most-dark;
+      font-weight: bold;
+      background: $most-light;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      @include boxShadow('none');
+    }
+
+    > button:hover {
+      @include boxShadow(4px 4px 2px 1px rgba(0, 0, 0, 0.2));
+    }
+  }
+
+  &.night {
+    .modal_body {
+      color: $light;
+      background-color: $dark;
+
+      > button {
+        color: $light;
+        background: $more-dark;
+        @include boxShadow('none');
+      }
+
+      > button:hover {
+        @include boxShadow(4px 4px 2px 1px rgba(0, 0, 0, 0.2));
+      }
+    }
+  }
+}
