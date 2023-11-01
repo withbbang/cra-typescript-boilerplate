@@ -28,7 +28,7 @@
   },
   "overrides": [
     {
-      "files": ["commonSlice.ts"],
+      "files": ["src/middlewares/reduxToolkits/*"],
       "rules": {
         "no-param-reassign": "off"
       }
