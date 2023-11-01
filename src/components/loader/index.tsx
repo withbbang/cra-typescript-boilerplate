@@ -5,27 +5,29 @@ import { connect } from 'react-redux';
 import { Action } from 'redux';
 import styles from './Loader.module.scss';
 
-const mapStateToProps = (state: PropState): CommonState => {
+function mapStateToProps(state: PropState): CommonState {
   return {
-    ...state.common
+    ...state.common,
   };
-};
+}
 
-const mapDispatchToProps = (dispatch: (actionFunction: Action<any>) => any) => {
+function mapDispatchToProps(dispatch: (actionFunction: Action<any>) => any) {
   return {};
-};
+}
 
-const Loader = ({ isFetching }: CommonState): JSX.Element => (
-  <div
-    className={styles.background}
-    style={
-      isFetching !== undefined && isFetching
-        ? { display: '' }
-        : { display: 'none' }
-    }
-  >
-    <span className={styles.loader}></span>
-  </div>
-);
+function Loader({ isFetching }: CommonState): React.JSX.Element {
+  return (
+    <div
+      className={styles.background}
+      style={
+        isFetching !== undefined && isFetching
+          ? { display: '' }
+          : { display: 'none' }
+      }
+    >
+      <span className={styles.loader} />
+    </div>
+  );
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(Loader);

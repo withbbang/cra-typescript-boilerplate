@@ -13,7 +13,7 @@ export const initialState: CommonState = {
   message: '',
   isFetching: false,
   isSuccess: false,
-  isFail: false
+  isFail: false,
 };
 
 const commonSlice = createSlice({
@@ -29,12 +29,12 @@ const commonSlice = createSlice({
     },
     handleLoaderFalse(state: CommonState) {
       state.isFetching = false;
-    }
+    },
   },
   // API 리듀서들 비동기 상태값들 한번에 관리하기 위한 extraReducers 모음
   extraReducers: {
     // ...add others
-  }
+  },
 });
 
 export const { handleCodeMessage, handleLoaderTrue, handleLoaderFalse } =

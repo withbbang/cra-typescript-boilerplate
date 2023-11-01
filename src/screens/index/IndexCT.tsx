@@ -3,10 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import { CommonState } from 'middlewares/reduxToolkits/commonSlice';
 import IndexPT from './IndexPT';
 
-const IndexCT = ({
+function IndexCT({
   handleLoaderTrue,
-  handleLoaderFalse
-}: typeIndexCT): JSX.Element => {
+  handleLoaderFalse,
+}: typeIndexCT): React.JSX.Element {
   const navigate = useNavigate();
 
   // 로그인 여부 판단 훅
@@ -16,7 +16,7 @@ const IndexCT = ({
   }, []);
 
   return <IndexPT />;
-};
+}
 
 interface typeIndexCT extends CommonState {
   handleLoaderTrue: () => void;

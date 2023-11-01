@@ -2,7 +2,7 @@ import React from 'react';
 import Loader from 'components/loader';
 import styles from './Index.module.scss';
 
-const IndexPT = ({}: typeIndexPT): JSX.Element => {
+function IndexPT({}: typeIndexPT): React.JSX.Element {
   return (
     <>
       <Loader />
@@ -11,7 +11,7 @@ const IndexPT = ({}: typeIndexPT): JSX.Element => {
       </div>
     </>
   );
-};
+}
 
 interface typeIndexPT {}
 

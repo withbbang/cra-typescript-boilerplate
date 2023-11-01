@@ -4,7 +4,7 @@ import storage from 'redux-persist/lib/storage';
 import common, { CommonState } from 'middlewares/reduxToolkits/commonSlice';
 
 const rootReducer = combineReducers({
-  common
+  common,
   // add others...
 });
 
@@ -18,7 +18,7 @@ const rootReducer = combineReducers({
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['common'] // add others...
+  whitelist: ['common'], // add others...
 };
 
 /**

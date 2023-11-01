@@ -5,22 +5,22 @@ import { connect } from 'react-redux';
 import { Action } from 'redux';
 import styles from './ConfirmPopup.module.scss';
 
-const mapStateToProps = (state: PropState): CommonState => {
+function mapStateToProps(state: PropState): CommonState {
   return {
-    ...state.common
+    ...state.common,
   };
-};
+}
 
-const mapDispatchToProps = (dispatch: (actionFunction: Action<any>) => any) => {
+function mapDispatchToProps(dispatch: (actionFunction: Action<any>) => any) {
   return {};
-};
+}
 
-const ConfirmPopup = ({
+function ConfirmPopup({
   isActive,
   confirmMessage,
   confirmType,
-  onConfirm
-}: typeConfirmPopup): JSX.Element => {
+  onConfirm,
+}: typeConfirmPopup): React.JSX.Element {
   return (
     <>
       {isActive ? (
@@ -36,12 +36,12 @@ const ConfirmPopup = ({
       ) : null}
     </>
   );
-};
+}
 
 interface typeConfirmPopup extends CommonState {
   isActive: boolean;
   confirmMessage: string;
-  confirmType?: string;
+  confirmType: string | undefined;
   onConfirm: (type?: string) => void;
 }
 
