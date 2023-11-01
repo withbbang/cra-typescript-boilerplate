@@ -126,3 +126,15 @@
   -ms-transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
   -o-transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
+
+@mixin tablit {
+  @media (max-width: $tablit) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}

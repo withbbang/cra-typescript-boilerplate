@@ -1,0 +1,53 @@
+.wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include background($more-light);
+
+  .backBtn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    > span {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+
+  .innerWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    word-break: break-word;
+    text-align: center;
+
+    > h1 {
+      margin-bottom: 0;
+    }
+
+    > span {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @include mobile {
+    .innerWrap {
+      padding-top: 100px;
+
+      > span {
+        > svg {
+          width: 300px;
+          height: 300px;
+        }
+      }
+    }
+  }
+}
