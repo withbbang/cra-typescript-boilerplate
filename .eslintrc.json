@@ -18,12 +18,15 @@
     "no-use-before-define": "warn",
     "no-empty-pattern": "warn",
     "no-unused-vars": "warn",
+    "no-shadow": "warn",
     "no-tabs": "off",
     "operator-linebreak": "off",
     "implicit-arrow-linebreak": "off",
     "space-before-function-paren": "off",
     "jsx-a11y/click-events-have-key-events": "warn",
     "jsx-a11y/no-static-element-interactions": "warn",
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "warn",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }]
   },
   "overrides": [

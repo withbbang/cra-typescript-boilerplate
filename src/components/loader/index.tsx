@@ -15,12 +15,12 @@ function mapDispatchToProps(dispatch: (actionFunction: Action<any>) => any) {
   return {};
 }
 
-function Loader({ isFetching }: CommonState): React.JSX.Element {
+function Loader({ isLoading }: CommonState): React.JSX.Element {
   return (
     <div
       className={styles.background}
       style={
-        isFetching !== undefined && isFetching
+        isLoading !== undefined && isLoading
           ? { display: '' }
           : { display: 'none' }
       }

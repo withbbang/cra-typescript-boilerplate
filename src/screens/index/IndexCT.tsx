@@ -1,26 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
 import { CommonState } from 'middlewares/reduxToolkits/commonSlice';
+import { useGetDatas } from 'modules/customHooks';
 import IndexPT from './IndexPT';
 
-function IndexCT({
-  handleLoaderTrue,
-  handleLoaderFalse,
-}: typeIndexCT): React.JSX.Element {
-  const navigate = useNavigate();
+function IndexCT({}: typeIndexCT): React.JSX.Element {
+  // const docs = useGetDatas('abcdefg');
 
-  // 로그인 여부 판단 훅
-  useEffect(() => {
-    handleLoaderTrue();
-    handleLoaderFalse();
-  }, []);
+  // useEffect(() => {
+  //   console.log(docs);
+  // }, [docs]);
 
   return <IndexPT />;
 }
 
-interface typeIndexCT extends CommonState {
-  handleLoaderTrue: () => void;
-  handleLoaderFalse: () => void;
-}
+interface typeIndexCT extends CommonState {}
 
 export default IndexCT;
