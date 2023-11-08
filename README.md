@@ -19,7 +19,7 @@
 ### 프로젝트 구조
 
 ```
-Service Diagrams
+Create React App Boilerplate for Typescript
 ├─ 📁config
 │  ├─ 📁jest
 │  │  ├─ 📄babelTransform.js
